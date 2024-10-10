@@ -3,6 +3,7 @@ import './Login.css'
 import logo from '../../assets/logo.png'
 import { login, signup } from '../../firebase'
 import netflix_spinner from '../../assets/netflix_spinner.gif'
+import { Link } from 'react-router-dom'
 
 const Login = () => {
   const [signState, setSignState] = useState("Sign In");
@@ -50,6 +51,7 @@ const Login = () => {
             ? <p>New to Netflix? <span onClick={() => {setSignState("Sign Up")}}>Sign Up Now</span></p>
             : <p>Already have account? <span onClick={() => {setSignState("Sign In")}}>Sign In Now</span></p>}
         </div>
+            <Link to="/">Continue as guest</Link>
       </div>
     </div>
   )
